@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debouncing</title>
+    <style>
+        .searcDiv{
+            margin-top: 40px;
+            text-align: center;
+            /* border: 1px solid red; */
+        }
+      #searcTerm {
+        /* text-align: center; */
+        /* margin: auto; */
+        padding: 10px;
+        border-radius: 3px;
+        /* box-shadow: 1px 1px 3px black; */
+      }
+      #container {
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* padding: 40px; */
+        margin-top: 40px;
+      }
+      .cart {
+        border: 2px solid green;
+        width: 250px;
+        margin: 20px;
+        /* height: 400px; */
+      }
+      .image {
+        width: 100%;
+      }
+      .title,
+      .year,
+      .type {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Debouncing</h1> -->
+    <div class="searcDiv">
+      <input
+        type="text"
+        id="searcTerm"
+        placeholder="Searc Movies.."
+        oninput="debounce(makeApi,700)"
+      />
+    </div>
+
+    <div id="container"></div>
+  </body>
+  <script src="index.js"></script>
+</html>
